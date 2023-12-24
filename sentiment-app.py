@@ -22,25 +22,29 @@ st.set_page_config(
 )
 col1, col2 = st.columns((6, 1))
 col1.title("# :rainbow[Predict Sentiment of Movie Review]")
-col2.image("assets/customer-reviews-and-feedback.jpeg", width=120)
-col2.markdown(
-    """
+col2.image("assets/customer-feedback.png", width=120)
+col1.markdown("""
     <style>
-    .streamlit-container {
-        background-color: yellow !important;
-    }
+        div[data-testid="stBlock"] {
+            background-color: #660033; 
+        }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-st.sidebar.image("assets/customer-feedback.png", width = 100)
-st.sidebar.title("Sentiment Analysis Model📈")
+col2.markdown("""
+    <style>
+        div[data-testid="stBlock"] {
+            background-color: #CC0066;
+        }
+    </style>
+""", unsafe_allow_html=True)
+st.sidebar.image("assets/icon.png")
+st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
     <div style='border:1px solid #ccc; padding: 10px; border-radius: 10px;'>
-        * I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.<br>
-        * Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.<br>
-        * Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.
+         I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.<br>
+         Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.<br>
+         Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.
     </div>
     """,
     unsafe_allow_html=True
@@ -53,15 +57,15 @@ st.sidebar.markdown("Mail: haiminh2892002@gmail.com")
 st.sidebar.write("---\n")
 st.sidebar.markdown("You can check out the source code [here](https://github.com/minh-hai-0905/Sentiment-Application-Mh/tree/main).")
 st.sidebar.write("---\n")
-
+st.sidebar.markdown("🤍🤍 Thank you very much 🤍🤍")
 
 ####-----APP-----
 
-review = st.text_area('Please enter your review 👇', height=150, key='review_input')
+review = st.text_area('Please enter your review 👇👇', height=150, key='review_input')
 st.markdown("""
     <style>
         #review_input {
-            font-size: 20px !important;
+            font-size: 40px !important;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -71,7 +75,7 @@ st.markdown(
     """
     <style>
     div[data-baseweb="textarea"] textarea {
-        background-color: yellow !important;
+        background-color: #CC0066 !important;
     }
     </style>
     """,
