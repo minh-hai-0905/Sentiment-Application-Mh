@@ -26,9 +26,7 @@ col2.image("assets/customer-feedback.png", width=120)
 
 col1.markdown("""
     <style>
-        .element-container {
             background-color: #660033;
-        }
     </style>
 """, unsafe_allow_html=True)
 
