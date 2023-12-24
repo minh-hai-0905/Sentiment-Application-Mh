@@ -24,27 +24,13 @@ col1, col2 = st.columns((6, 1))
 col1.title("# :rainbow[Predict Sentiment of Movie Review]")
 col2.image("assets/customer-feedback.png", width=120)
 
-st.markdown("""
-    <style>
-            background-color: #660033;
-    </style>
-""", unsafe_allow_html=True)
-
-col2.markdown("""
-    <style>
-        .element-container {
-            background-color: #CC0066;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 st.sidebar.image("assets/icon.png")
 st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
     <div style='border:1px solid #ccc; padding: 10px; border-radius: 10px;'>
-         I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.<br>
-         Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.<br>
-         Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.
+         - _I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF._
+         - _Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%._
+         - _Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review._
     </div>
     """,
     unsafe_allow_html=True
