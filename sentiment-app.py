@@ -57,7 +57,21 @@ st.sidebar.write("---\n")
 
 ####-----APP-----
 
-review = st.text_area('Please enter your review 👇', height=150, font-size: 20px, key='review_input')
+review = st.text_area(
+    'Please enter your review 👇',
+    height=150,
+    key='review_input',
+    format='html'
+)
+
+st.markdown("""
+    <style>
+        #review_input {
+            font-size: 20px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.markdown(
     """
     <style>
