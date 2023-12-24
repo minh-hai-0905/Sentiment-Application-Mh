@@ -21,7 +21,7 @@ st.set_page_config(
 
 )
 col1, col2 = st.columns((6, 1))
-col1.title("rainbow[Predict Sentiment of Movie Review]")
+col1.title("# :rainbow[Predict Sentiment of Movie Review]")
 col2.image("assets/customer-reviews-and-feedback.jpeg", width=120)
 col2.markdown(
     """
@@ -57,13 +57,7 @@ st.sidebar.write("---\n")
 
 ####-----APP-----
 
-review = st.text_area(
-    'Please enter your review 👇',
-    height=150,
-    key='review_input',
-    format='html'
-)
-
+review = st.text_area('Please enter your review 👇', height=150, key='review_input')
 st.markdown("""
     <style>
         #review_input {
@@ -71,6 +65,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown(
     """
@@ -103,7 +98,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-author = "rainbow[<strong> INTRODUCE | IMDb ✨✨✨ </strong>]"
+author = "# :rainbow[<strong> INTRODUCE | IMDb ✨✨✨ </strong>]"
 st.markdown(author, unsafe_allow_html=True)
 #link to IMDB Review
 st.markdown(" 👉 [🎥Visit IMDb: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
