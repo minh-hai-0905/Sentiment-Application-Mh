@@ -48,7 +48,16 @@ st.sidebar.markdown("🤍🤍 Thank you very much 🤍🤍")
 
 ####-----APP-----
 
-st.markdown('Please enter your review 👇👇', height=150)
+review = st.text_area('Please enter your review 👇👇', height=150, key='review_input')
+st.markdown("""
+    <style>
+        label[for="review_input"]::before {
+            content: "Please enter your review ";
+            font-size: 40px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 
 st.markdown(
     """
