@@ -8,9 +8,6 @@ Created on Sat Dec 23 20:48:45 2023
 
 import streamlit as st
 import pickle
-import io
-import os
-
 
 # load model
 model = pickle.load(open('sentiment_analysis_mh.pkl', 'rb'))
@@ -24,13 +21,32 @@ st.set_page_config(
 
 )
 col1, col2 = st.columns((6, 1))
-col1.title(" PREDICT SENTIMENT OF MOVIE REVIEWS ")
-col2.image("assets/customer-reviews-and-feedback.jpeg", width=120)
-st.sidebar.image("assets/icon.png")
+col1.title("#:rainbow[Predict Sentiment of Movie Review]")
+col2.image("assets/icon.png", width=120)
+col2.markdown(
+    """
+    <style>
+    div[data-baseweb="drawer-container"] {
+        background-color: yellow !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.sidebar.image("assets/customer-reviews-and-feedback.jpeg")
 st.sidebar.title("Sentiment Analysis Model📈")
-st.sidebar.caption("""I proceeded to build an sentiment classification model for IMDB reviews using TF-IDF. Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.
-                   Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.""")
-st.sidebar.markdown("Made by Trinh Minh Hai")
+st.sidebar.caption("""
+    <div style='border:1px solid #ccc; padding: 10px; border-radius: 10px;'>
+        I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.<br>
+        Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.<br>
+        Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.sidebar.write("---\n")
+st.sidebar.markdown("Made by: Trinh Minh Hai")
 st.sidebar.markdown("Mail: haiminh2892002@gmail.com")
 
 st.sidebar.write("---\n")
@@ -39,15 +55,25 @@ st.sidebar.write("---\n")
 
 
 ####-----APP-----
-review = st.text_input('Please enter your review:')
 
-submit = st.button('Predict')
+review = st.text_area('Please enter your review 👇', height=150, key='review_input')
+st.markdown(
+    """
+    <style>
+    div[data-baseweb="textarea"] textarea {
+        background-color: yellow !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
        
 if submit:
     prediction = model.predict([review])
 
     if prediction[0] == 'positive':
-        st.success(' 🤩🤩 Positive Review')
+        st.success(' 🥰🥰 Positive Review')
     else:
         st.warning(' 🥺🥺 Negative Review')
         
@@ -62,5 +88,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+author = "# :rainbow[<strong> INTRODUCE | IMDb ✨✨✨ </strong>]"
+st.markdown(author, unsafe_allow_html=True)
 #link to IMDB Review
-st.markdown(" 👉 [🎥Visit IMDB: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
+st.markdown(" 👉 [🎥Visit IMDb: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
+st.image("assets/imdb.png")
+("""
+* IMDb (Internet Movie Database) is an online database of information related to films, television series, podcasts, home videos, video games,
+and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. 
+IMDb began as a fan-operated movie database on the [Usenet](https://en.wikipedia.org/wiki/Usenet) group "rec.arts.movies" in 1990, and moved to the Web in 1993. 
+Since 1998, it has been owned and operated by IMDb.com, Inc., a subsidiary of [Amazon](https://en.wikipedia.org/wiki/Amazon_(company)).
+
+* As of 2019, IMDb was the 52nd most visited website on the Internet, as ranked by [Alexa](https://en.wikipedia.org/wiki/Alexa_Internet). 
+As of March 2022, the database contained some 10.1 million titles (including television episodes), 11.5 million person records, and 83 million registered users.
+""")
