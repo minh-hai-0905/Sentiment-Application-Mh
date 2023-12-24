@@ -60,16 +60,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-st.markdown(
-    """
-    <style>
-    div[data-baseweb="textarea"] textarea {
-        background-color: ## B03060 !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 submit = st.button('Predict')      
 if submit:
