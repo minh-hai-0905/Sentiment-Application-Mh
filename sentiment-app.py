@@ -27,7 +27,7 @@ col2.image("assets/customer-feedback.png", width=120)
 st.sidebar.image("assets/icon.png")
 st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
-    <div style='border: 1px solid #ccc; padding: 10px; border-radius: 10px; text-align: justify;'>
+    <div style='border: 1px solid #ccc; padding: 10px; border-radius: 10px;'>
         <ul style='list-style-type: circle;'>
             <li>I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.</li>
             <li>Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.</li>
@@ -45,7 +45,7 @@ st.sidebar.markdown("Mail: haiminh2892002@gmail.com")
 st.sidebar.write("---\n")
 st.sidebar.markdown("You can check out the source code [here](https://github.com/minh-hai-0905/Sentiment-Application-Mh/tree/main).")
 st.sidebar.write("---\n")
-st.sidebar.markdown("🤍🤍 Thank you very much 🤍🤍")
+st.sidebar.markdown("🤍🤍🤍 Thank you very much 🤍🤍🤍")
 
 ####-----APP-----
 
@@ -64,7 +64,7 @@ st.markdown(
     """
     <style>
     div[data-baseweb="textarea"] textarea {
-        background-color: ##993b58 !important;
+        background-color: #CD3278 !important;
     }
     </style>
     """,
