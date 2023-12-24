@@ -23,21 +23,23 @@ st.set_page_config(
 col1, col2 = st.columns((6, 1))
 col1.title("# :rainbow[Predict Sentiment of Movie Review]")
 col2.image("assets/customer-feedback.png", width=120)
+
 col1.markdown("""
     <style>
-        div[data-testid="stBlock"] {
-            background-color: #660033; 
+        .element-container {
+            background-color: #660033;
         }
     </style>
 """, unsafe_allow_html=True)
 
 col2.markdown("""
     <style>
-        div[data-testid="stBlock"] {
+        .element-container {
             background-color: #CC0066;
         }
     </style>
 """, unsafe_allow_html=True)
+
 st.sidebar.image("assets/icon.png")
 st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
