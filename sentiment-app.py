@@ -21,20 +21,21 @@ st.set_page_config(
 
 )
 col1, col2 = st.columns((6, 1))
-col1.title("# :rainbow[Predict Sentiment of Movie Review]")
+col1.title("Predict Sentiment of Movie Review")
 col2.image("assets/customer-feedback.png", width=120)
 
 st.sidebar.image("assets/icon.png")
 st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
     <div style='border:1px solid #ccc; padding: 10px; border-radius: 10px;'>
-         - _I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF._
-         - _Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%._
-         - _Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review._
+        <ul style='list-style-type: circle;'>
+            <li>I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.</li>
+            <li>Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.</li>
+            <li>Then, I employed pickle and streamlit to develop a web application that predicts emotions for any review.</li>
+        </ul>
     </div>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
+
 
 st.sidebar.write("---\n")
 st.sidebar.markdown("Made by: Trinh Minh Hai")
@@ -61,7 +62,7 @@ st.markdown(
     """
     <style>
     div[data-baseweb="textarea"] textarea {
-        background-color: #CC0066 !important;
+        background-color: ##993b58 !important;
     }
     </style>
     """,
@@ -88,7 +89,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-author = "# :rainbow[<strong> INTRODUCE | IMDb ✨✨✨ </strong>]"
+author = "<strong> Introduce | IMDb ✨✨✨ </strong>"
 st.markdown(author, unsafe_allow_html=True)
 #link to IMDB Review
 st.markdown(" 👉 [🎥Visit IMDb: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
