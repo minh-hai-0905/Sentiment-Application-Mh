@@ -24,7 +24,7 @@ col1, col2 = st.columns((6, 1))
 col1.title("# :rainbow[Predict Sentiment of Movie Review]")
 col2.image("assets/customer-feedback.png", width=120)
 
-col1.markdown("""
+st.markdown("""
     <style>
             background-color: #660033;
     </style>
