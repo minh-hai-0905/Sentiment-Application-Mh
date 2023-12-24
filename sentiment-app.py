@@ -48,16 +48,7 @@ st.sidebar.markdown("🤍🤍 Thank you very much 🤍🤍")
 
 ####-----APP-----
 
-review = st.text_area('Please enter your review 👇👇', height=150, key='review_input')
-st.markdown("""
-    <style>
-        label[for="review_input"] {
-            font-size: 40px !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
+st.markdown('Please enter your review 👇👇', height=150)
 
 st.markdown(
     """
@@ -91,7 +82,6 @@ st.markdown(
 )
 
 st.title("Introduce | IMDb ✨✨✨")
-st.markdown(author, unsafe_allow_html=True)
 #link to IMDB Review
 st.markdown(" 👉 [🎥Visit IMDb: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
 st.image("assets/imdb.png")
