@@ -27,7 +27,7 @@ col2.image("assets/customer-feedback.png", width=120)
 st.sidebar.image("assets/icon.png")
 st.sidebar.title("Sentiment Analysis Model")
 st.sidebar.markdown("""
-    <div style='border:1px solid #ccc; padding: 10px; border-radius: 10px;'>
+    <div style='border: 1px solid #ccc; padding: 10px; border-radius: 10px; text-align: justify;'>
         <ul style='list-style-type: circle;'>
             <li>I proceeded to build a sentiment classification model for IMDB reviews using TF-IDF.</li>
             <li>Utilizing different classification algorithms, the LinearSVC model achieved the highest accuracy of 91.23%.</li>
@@ -35,6 +35,7 @@ st.sidebar.markdown("""
         </ul>
     </div>
 """, unsafe_allow_html=True)
+
 
 
 st.sidebar.write("---\n")
@@ -94,12 +95,20 @@ st.title("Introduce | IMDb ✨✨✨")
 #link to IMDB Review
 st.markdown(" 👉 [🎥Visit IMDb: The world's most popular and authoritative source for movie](https://www.imdb.com/?ref_=nv_home)")
 st.image("assets/imdb.png")
-("""
-* IMDb (Internet Movie Database) is an online database of information related to films, television series, podcasts, home videos, video games,
-and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. 
-IMDb began as a fan-operated movie database on the [Usenet](https://en.wikipedia.org/wiki/Usenet) group "rec.arts.movies" in 1990, and moved to the Web in 1993. 
-Since 1998, it has been owned and operated by IMDb.com, Inc., a subsidiary of [Amazon](https://en.wikipedia.org/wiki/Amazon_(company)).
+st.markdown("""
+    <div style='text-align: justify;'>
+        <ul style='list-style-type: disc;'>
+            <li>
+                IMDb (Internet Movie Database) is an online database of information related to films, television series, podcasts, home videos, video games,
+                and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews. 
+                IMDb began as a fan-operated movie database on the <a href="https://en.wikipedia.org/wiki/Usenet">Usenet</a> group "rec.arts.movies" in 1990, and moved to the Web in 1993. 
+                Since 1998, it has been owned and operated by IMDb.com, Inc., a subsidiary of <a href="https://en.wikipedia.org/wiki/Amazon_(company)">Amazon</a>.
+            </li>
+            <li>
+                As of 2019, IMDb was the 52nd most visited website on the Internet, as ranked by <a href="https://en.wikipedia.org/wiki/Alexa_Internet">Alexa</a>. 
+                As of March 2022, the database contained some 10.1 million titles (including television episodes), 11.5 million person records, and 83 million registered users.
+            </li>
+        </ul>
+    </div>
+""", unsafe_allow_html=True)
 
-* As of 2019, IMDb was the 52nd most visited website on the Internet, as ranked by [Alexa](https://en.wikipedia.org/wiki/Alexa_Internet). 
-As of March 2022, the database contained some 10.1 million titles (including television episodes), 11.5 million person records, and 83 million registered users.
-""")
