@@ -22,7 +22,7 @@ st.set_page_config(
 )
 col1, col2 = st.columns((6, 1))
 col1.title("#:rainbow[Predict Sentiment of Movie Review]")
-col2.image("assets/icon.png", width=120)
+col2.image("assets/customer-feedback.png", width=120)
 col2.markdown(
     """
     <style>
