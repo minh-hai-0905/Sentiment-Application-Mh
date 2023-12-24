@@ -64,7 +64,7 @@ st.markdown(
     """
     <style>
     div[data-baseweb="textarea"] textarea {
-        background-color: #CD3278 !important;
+        background-color: ## B03060 !important;
     }
     </style>
     """,
